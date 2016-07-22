@@ -17,20 +17,19 @@ class FilterIfTurbolinks
     {
         $response = $next($request);
 
-        if ($request->ajax()) {
+        $turbolinksLocation = session('_turbolinks_location');
+
+        if ($request->ajax() && ! $request->isMethod('get')) {
             $script = [];
             $script[] = "Turbolinks.clearCache()";
-            $script[] = "Turbolinks.visit('" . $request->path() . " ')";
+            $script[] = "Turbolinks.visit('" . $turbolinksLocation . " ')";
 
             $response->setContent(join(";", $script));
             $response->header('Content-Type', 'application/javascript');
             $response->setStatusCode(422);
+        } else if ($turbolinksLocation) {
+            return $response->header("Turbolinks-Location", $turbolinksLocation);
         }
-
-        // set visit
-        // Turbolinks-Location
-        /* if ($request->header('turbolinks-referrer') && $response->isRedirection()) { */
-        /* } */
 
         return $response;
     }

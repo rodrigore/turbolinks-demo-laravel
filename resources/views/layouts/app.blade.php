@@ -56,6 +56,10 @@
                 </ul>
 
                 <ul class="nav navbar-nav">
+                    <li><a href="{{ url('/contact') }}">Contact</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav">
                     <li><a href="{{ url('/login') }}">Login example</a></li>
                 </ul>
 

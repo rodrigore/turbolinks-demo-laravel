@@ -5,7 +5,9 @@ Route::get('/', function () {
 });
 
 Route::get('/contact', function () {
-    return view('contact');
+    // testing
+    return redirect('/home')
+        ->with('_turbolinks_location', '/home');
 });
 
 Route::get('/home', 'HomeController@index');

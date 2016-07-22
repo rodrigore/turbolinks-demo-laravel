@@ -16,10 +16,6 @@ document.addEventListener("turbolinks:load", function() {
     });
   });
 
-document.addEventListener("turbolinks:request-start", function(event) {
-var xhr = event.data.xhr
-xhr.setRequestHeader("X-Request-Id", "123")
-});
 @endsection
 
 @section('content')
