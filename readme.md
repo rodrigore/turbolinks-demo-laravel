@@ -1,26 +1,27 @@
-# Laravel PHP Framework
+# Example of using Turbolinks 5 in Laravel
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+This Laravel 5.2 demo project aims to test [Turbolinks 5](https://github.com/turbolinks/turbolinks).
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+Turbolinks make the navigation ultra fast using xhr of every request, and also made possible form submission with xhr, with the help of the server, in this case Laravel.
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+## Demo
 
-## Official Documentation
+The demo only have a few links, showing that every links is an xhr request.
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+Also show the case of using a form submission (login) using turbolinks.
 
-## Contributing
+## How this demo works?
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+* Use Turbolinks 5, using laravel elixir (only two lines of code)
+* Use a Middleware call `FilterIfTurbolinks` (this is the key to use redirection and xhr form submission)
+* Optional use a FormRequest call `TurbolinksRequest` that always return a response of a view or html, so you can inject some Request that extends of this Request
+* In order to use the redirection, is necessary to set the value of `_turbolinks_location` with the route that or url that is intended to redirect
 
-## Security Vulnerabilities
+## Why I made this demo?
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+I made this demo in order to test Turbolinks, but I never use Turbolinks before.
+
+I saw the video of the [RailsConf 2016 about Turbolinks](https://www.youtube.com/watch?v=SWEts0rlezA) and I believe that would be pretty cool using Laravel and make some mobile application.
 
 ## License
 
