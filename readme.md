@@ -6,9 +6,7 @@ Turbolinks make the navigation ultra fast using xhr of every request, and also m
 
 ## Demo
 
-The demo only have a few links, showing that every links is an xhr request.
-
-Also show the case of using a form submission (login) using turbolinks.
+The demo only have a few links, showing that every links is an xhr request, with one example of redirection and also show the case of using a form submission (login) using turbolinks.
 
 ## How this demo works?
 
