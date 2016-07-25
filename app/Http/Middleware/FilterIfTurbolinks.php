@@ -22,13 +22,13 @@ class FilterIfTurbolinks
         if ($request->ajax() && ! $request->isMethod('get')) {
             $script = [];
             $script[] = "Turbolinks.clearCache()";
-            $script[] = "Turbolinks.visit('" . $turbolinksLocation . " ')";
+            $script[] = "Turbolinks.visit('" . $turbolinksLocation . "')";
 
             $response->setContent(join(";", $script));
             $response->header('Content-Type', 'application/javascript');
-            $response->setStatusCode(422);
+            $response->setStatusCode(202);
         } else if ($turbolinksLocation) {
-            return $response->header("Turbolinks-Location", $turbolinksLocation);
+            $response->header("Turbolinks-Location", $turbolinksLocation);
         }
 
         return $response;

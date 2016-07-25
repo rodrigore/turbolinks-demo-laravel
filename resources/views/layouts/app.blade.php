@@ -56,11 +56,11 @@
                 </ul>
 
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/contact') }}">Contact</a></li>
+                    <li><a href="{{ url('/exampleRedirection') }}">Redirection</a></li>
                 </ul>
 
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/login') }}">Login example</a></li>
+                    <li><a href="{{ url('/login') }}">Submit with turbolinks</a></li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->

@@ -10,6 +10,7 @@ class TurbolinksRequest extends FormRequest
     {
         return $this->redirector->to($this->getRedirectUrl())
             ->withInput($this->except($this->dontFlash))
+            ->with('_turbolinks_location', $this->getRedirectUrl())
             ->withErrors($errors, $this->errorBag);
     }
 }

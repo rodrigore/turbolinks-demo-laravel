@@ -23,7 +23,7 @@ document.addEventListener("turbolinks:load", function() {
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">About - Login example</div>
+                <div class="panel-heading">Login example</div>
                 <div class="panel-body">
                     <form id='form' class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
                         {{ csrf_field() }}

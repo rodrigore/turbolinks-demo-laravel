@@ -5,22 +5,38 @@ namespace App\Http\Controllers;
 use App\Http\Requests;
 use App\Http\Requests\StoreRequest;
 use Illuminate\Http\Request;
-use \Validator;
 
 class HomeController extends Controller
 {
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         return view('home');
     }
 
-    public function store(Request $request)
+    public function example()
+    {
+        return redirect('/home')
+            ->with('_turbolinks_location', '/home');
+    }
+
+    public function login()
+    {
+        return view('login');
+    }
+
+    public function store(StoreRequest $request)
+    {
+        return redirect('/home')
+            ->with('_turbolinks_location', '/home');
+    }
+
+    /**
+     * Alternative
+     *
+     * Using Validation
+     */
+    public function storeWithManualValidation(Request $request)
     {
         $validator = Validator::make($request->all(), [
             'email' => 'required',
@@ -31,7 +47,6 @@ class HomeController extends Controller
             return back()
                 ->withErrors($validator)
                 ->withInput();
-                /* ->with('_turbolinks_location', '/login'); */
         }
 
         return redirect('/home')
