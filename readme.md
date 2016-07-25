@@ -8,6 +8,8 @@ Turbolinks make the navigation ultra fast using xhr of every request, and also m
 
 The demo only have a few links, showing that every links is an xhr request, with one example of redirection and also show the case of using a form submission (login) using turbolinks.
 
+![Turbolinks](turbolinks.gif?raw=true "Turbolinks")
+
 ## How this demo works?
 
 * Use Turbolinks 5, using laravel elixir (only two lines of code)
