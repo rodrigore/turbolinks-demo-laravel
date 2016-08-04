@@ -10,4 +10,6 @@ Route::get('/exampleRedirection', 'HomeController@example');
 
 Route::get('/login', 'HomeController@login');
 
+Route::get('/login-ujs', 'HomeController@loginUJS');
+
 Route::post('/login', 'HomeController@store');

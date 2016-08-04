@@ -25,6 +25,12 @@ class HomeController extends Controller
         return view('login');
     }
 
+    public function loginUJS()
+    {
+        return view('login_ujs');
+    }
+
+
     public function store(StoreRequest $request)
     {
         return redirect('/home')
