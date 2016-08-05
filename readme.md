@@ -15,7 +15,7 @@ The demo only have a few links, showing that every links is an xhr request, with
 * Use Turbolinks 5, using laravel elixir (only two lines of code)
 * Use a Middleware call `FilterIfTurbolinks` (this is the key to use redirection and xhr form submission)
 * Optional use a FormRequest call `TurbolinksRequest` that always return a response of a view or html, so you can inject some Request that extends of this Request
-* In order to use the redirection, is necessary to set the value of `_turbolinks_location` with the route that or url that is intended to redirect
+* In order to use the redirection, is necessary to set the value of `_turbolinks_location` with the route that or url that is intended to redirect. You can set manual the value of `_turbolinks_location` or you can use the helper response like this: `response()->turbolinks('/home')` (redirect to home and set the value of this url in the session `_turbolinks_location`)
 
 ## Why I made this demo?
 
