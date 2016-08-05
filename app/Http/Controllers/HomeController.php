@@ -16,8 +16,7 @@ class HomeController extends Controller
 
     public function example()
     {
-        return redirect('/home')
-            ->with('_turbolinks_location', '/home');
+        return response()->turbolinks('/home');
     }
 
     public function login()
@@ -33,8 +32,7 @@ class HomeController extends Controller
 
     public function store(StoreRequest $request)
     {
-        return redirect('/home')
-            ->with('_turbolinks_location', '/home');
+        return response()->turbolinks('/home');
     }
 
     /**

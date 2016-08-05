@@ -156,6 +156,11 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /*
+         * Turbolinks Service Providers...
+         */
+        App\Providers\ResponseTurbolinksServiceProvider::class,
+
     ],
 
     /*
